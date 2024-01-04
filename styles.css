@@ -1,26 +1,53 @@
 ﻿body {
     background-color: #05192B;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* ensures padding doesn't affect overall width */
 }
 
-h1 {
+h1.centered {
     color: #FFFFFF;
+    font-size: calc(0.5rem + 2vw);
     position: relative;
-    font-size: calc(1rem + 2vw);
-    top: 80px;
-    z-index: 10;
+    top: calc(7vw + 0.5rem); /* Adjust this value to move h1 up or down */
+    left: calc(38vw + 2rem);
+    transform: translateX(-50%); /* Centers the h1 horizontally */
+    z-index: 2; /* Ensures h1 is above the rectangle */
+    max-width: 90%;
+    margin: 0;
 }
 
 .centered {
     display: flex;
     justify-content: center;
+    align-items: center; /* vertically center content if needed */
+    flex-direction: column; /* stack children vertically */
 }
 
 .rectangle {
     width: 100%;
-    height: 205px;
-    position: relative;
-    flex: 0 1 auto;
-    top: -85px;
+    height: calc(0.5rem + 12vw); /* Initial height based on viewport width */
     background-color: #1C5576;
+    position: relative;
+    top: -2vw; /* Initial top position based on viewport width */
+    z-index: 1;
+    transition: height 0.3s ease, top 0.3s ease; /* Smooth transition */
 }
 
+.new-line {
+    display: block;
+}
+
+h1.centered .left-aligned {
+    margin-left: -9% /* This will push the object 20px from the left edge of its container */
+}
+
+img {
+    width: 15%;
+    height: 15%;
+    position: relative;
+    left: 9vw; /* Moves the image 20px to the right from its normal position */
+    top: -16vw; /* Moves the image 10px down from its normal position */
+    z-index: 2;
+}
