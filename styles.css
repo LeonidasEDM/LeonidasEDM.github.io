@@ -1,53 +1,43 @@
-﻿body {
-    background-color: #05192B;
-    font-family: Arial, sans-serif;
+﻿* {
+    font-family: Garamond;
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* ensures padding doesn't affect overall width */
 }
 
-h1.centered {
-    color: #FFFFFF;
-    font-size: calc(0.5rem + 2vw);
-    position: relative;
-    top: calc(7vw + 0.5rem); /* Adjust this value to move h1 up or down */
-    left: calc(38vw + 2rem);
-    transform: translateX(-50%); /* Centers the h1 horizontally */
-    z-index: 2; /* Ensures h1 is above the rectangle */
-    max-width: 90%;
-    margin: 0;
+body {
+    background-color: #05192B;
 }
 
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* vertically center content if needed */
-    flex-direction: column; /* stack children vertically */
+.title {
+    color: rgba(255,255,255,0.98);
+    position: relative;
+    z-index: 2; /* Ensures h1 is above the rectangle */
+    max-width: 90%;
+    top: calc(-8vw - 4rem);
+    margin-left: calc(21.5vw + 6rem);
+    font-size: calc(1.9vw + 0.2rem);
 }
+    .title h2 {
+        color: rgba(255,255,255,0.7);
+        position: relative;
+        top: 0.3vw;
+        font-size: calc(1.2vw + 0.4rem)
+    }
 
 .rectangle {
     width: 100%;
-    height: calc(0.5rem + 12vw); /* Initial height based on viewport width */
+    height: calc(10vw + 3rem); /* Initial height based on viewport width */
     background-color: #1C5576;
     position: relative;
-    top: -2vw; /* Initial top position based on viewport width */
+    top: 4rem; /* Initial top position based on viewport width */
     z-index: 1;
-    transition: height 0.3s ease, top 0.3s ease; /* Smooth transition */
-}
-
-.new-line {
-    display: block;
-}
-
-h1.centered .left-aligned {
-    margin-left: -9% /* This will push the object 20px from the left edge of its container */
 }
 
 img {
-    width: 15%;
-    height: 15%;
+    left: 10%;
+    top: calc(-0.2vw - 0.9rem);
+    height: calc(10vw + 5rem);
     position: relative;
-    left: 9vw; /* Moves the image 20px to the right from its normal position */
-    top: -16vw; /* Moves the image 10px down from its normal position */
     z-index: 2;
 }
