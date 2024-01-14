@@ -6,7 +6,11 @@
 }
 
 body {
-    background-color: #05192B;
+    background-color: #1C1C1C;
+}
+
+.description {
+    margin-left: calc(16vw + 4.5rem);
 }
 
 .title {
@@ -14,30 +18,38 @@ body {
     position: relative;
     z-index: 2; /* Ensures h1 is above the rectangle */
     max-width: 90%;
-    top: calc(-8vw - 4rem);
-    margin-left: calc(21.5vw + 6rem);
-    font-size: calc(1.9vw + 0.2rem);
+    top: calc(3.5vw + 0.7rem);
+    font-size: calc(1.5vw + 0.53rem);
 }
     .title h2 {
         color: rgba(255,255,255,0.7);
         position: relative;
-        top: 0.3vw;
-        font-size: calc(1.2vw + 0.4rem)
+        top: 0.2vw;
+        font-size: calc(1vw + 0.5rem)
     }
 
-.rectangle {
-    width: 100%;
-    height: calc(10vw + 3rem); /* Initial height based on viewport width */
-    background-color: #1C5576;
-    position: relative;
-    top: 4rem; /* Initial top position based on viewport width */
-    z-index: 1;
+.profileRectangle {
+    width: calc(13vw + 4rem);
+    height: calc(160vw); /* Initial height based on viewport width */
+    background-color: #724A80;
+    position: absolute;
+    z-index: 3;
 }
 
 img {
-    left: 10%;
-    top: calc(-0.2vw - 0.9rem);
-    height: calc(10vw + 5rem);
-    position: relative;
-    z-index: 2;
+    width: 100%;
+    position: absolute;
+    z-index: 4;
 }
+
+.rectangelDesing {
+    position: absolute;
+    top: calc(15vw + 4rem);
+    border-top: calc(2vw + 1.2rem) solid transparent;
+    border-left: calc((3vw + 1.2rem)) solid #724A80;
+    border-right: calc((10vw + 3rem)) solid #724A80;
+    width: calc(13vw + 4rem);
+    height: 100%;
+    z-index: 5;
+}
+
