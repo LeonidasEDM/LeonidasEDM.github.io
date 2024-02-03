@@ -3,127 +3,90 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* ensures padding doesn't affect overall width */
-
-}
-
-.description h2 {
-    color: #A094B7;
-    font-weight:bold;
-    margin: 0.2rem 0;
-}
-
-* h3 {
-    color: #9E9E9E;
 }
 
 body {
-    background-color: #1A1A1A;
+    background-color: #1C1C1C;
 }
 
-.alingment {
-    margin-left: calc(14.5vw + 3.3rem);
-    top: calc(3.5vw + 0.3rem);
-    color: #F5F5F5;
+img {
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    opacity: 0.8;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-color: #1C1C1C;
+    position: absolute;
+}
+
+    .background img {
+        z-index: 1;
+    }
+
+.mainTitle {
+    z-index: 2;
+    width: 100%;
+    top: 70px;
+    height: 280px;
+    background-color: #1C1C1C;
+    position: absolute;
+}
+
+    .mainTitle h1, h2 {
+        text-align: center;
+        position: relative;
+        top: 80px;
+    }
+
+    .mainTitle h1 {
+        color: rgba(255,255,255,0.98);
+        font-size: 60px;
+    }
+
+    .mainTitle h2 {
+        color: rgba(255,255,255,0.7);
+        font-size: 24px;
+    }
+
+.descriptionRec {
+    z-index: 2;
     position: relative;
+    width: 100%;
+    top: 400px;
+    height: 450px;
+    background-color: #0E0D0D;
+    color: rgba(255,255,255,0.7);
 }
 
 .title {
-    z-index: 2; /* Ensures h1 is above the rectangle */
-    font-size: calc(1.4vw + 0.5rem);
-    max-width: 90%;
-    margin: 0 0 2rem 0;
-}
-.subtitle {
-    color: #9E9E9E;
-    position: relative;
-    top: -0.1vw;
-    font-size: calc(0.8vw + 0.4rem)
+    height: 20%;
+    z-index: 2;
 }
 
-    .description{
-        position: relative;
-        margin-right: 20%;
-        font-size: calc(0.8vw + 0.4rem);
+    .title h2 {
+        top: 50%;
     }
 
-.divider {
-    width: 100%;
-    height: 3px;
-    background-color: #724A80;
-}
-
-.profileBackground {
-    margin: 3rem 0;
-}
-
-.profileExperience {
-    position: relative;
-    margin: 3rem 0;
-}
-
-
-.profileRectangle {
-    width: calc(12vw + 3rem);
-    height: 100%;
-    background-color: #724A80;
-    position: absolute;
+.description {
+    display: inline-block;
+    width: 50%;
     z-index: 3;
-}
-
-.profilePic {
-    width: 100%;
     position: relative;
-    z-index: 4;
+    padding: 40px;
 }
 
-.phonePic {
-    width: 15px;
-    height: auto;
-    position: relative;
-    z-index: 4;
-    margin-right: 10px;
-}
+    .description h3 {
+        position: relative;
+        font-size: 16px;
+    }
 
-.mailPic {
-    width: 40px;
-    position: relative;
-    z-index: 4;
-    background: transparent;
-    margin-right: 10px;
-}
-
-.locationPic {
-    width: 10px;
-    position: relative;
-    z-index: 4;
-    background: transparent;
-    margin-right: 10px;
-}
-
-.block {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: calc(0.6vw + 0.3rem);
-    z-index: 5;
-    background: linear-gradient(45deg, rgba(28,28,28,0.3697128509606967) 46%, rgba(73,42,84,1) 100%);
-    margin: 3rem 1rem;
-    padding: 1rem;
-}
-
-.outblock {
-    display: flex;
-}
-
-.rectangelDesing {
+.descriptionRec img {
+    left: 70%;
+    width: 20%;
     position: absolute;
-    top: calc(13.42vw + 3rem);
-    border-top: calc(3vw + 1.2rem) solid transparent;
-    border-left: calc(4.5vw + 1.125rem) solid #724A80;
-    border-right: calc(7.5vw + 1.915rem) solid #724A80;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
+    z-index: 4;
 }
-
