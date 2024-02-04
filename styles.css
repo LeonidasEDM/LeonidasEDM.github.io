@@ -63,12 +63,16 @@ img {
 }
 
 .title {
-    height: 20%;
+    position:relative;
+    height: 80px;
     z-index: 2;
 }
 
     .title h2 {
-        top: 50%;
+        position: relative;
+        top:30px;
+        padding:0;
+        margin:0;
     }
 
 .description {
@@ -77,11 +81,24 @@ img {
     z-index: 3;
     position: relative;
     padding: 40px;
+    margin: 0;
 }
-
     .description h3 {
         position: relative;
         font-size: 16px;
+    }
+
+.description2 {
+    display: inline-block;
+    width: 50%;
+    z-index: 3;
+    position: relative;
+    padding: 40px;
+    left: 50%;
+}
+
+    .description2 strong {
+        color: rgba(255,255,255,0.9);
     }
 
 .descriptionRec img {
@@ -90,3 +107,20 @@ img {
     position: absolute;
     z-index: 4;
 }
+
+.educationRec {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    top: 450px;
+    height: 850px;
+    background-color: #272323;
+    color: rgba(255,255,255,0.7);
+}
+
+    .educationRec img {
+        left: 5%;
+        width: 35%;
+        position: absolute;
+        z-index: 4;
+    }
