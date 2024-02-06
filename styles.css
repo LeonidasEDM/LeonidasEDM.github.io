@@ -64,15 +64,32 @@ img {
 
 .title {
     position:relative;
-    height: 80px;
+    height: 90px;
     z-index: 2;
 }
 
     .title h2 {
+        color: rgba(255,255,255,0.98);
         position: relative;
-        top:30px;
-        padding:0;
-        margin:0;
+        top: 30px;
+        padding: 0;
+        margin: 0;
+    }
+
+.subtitle {
+    position: relative;
+    z-index: 2;
+    padding:0px;
+    margin:0px;
+
+}
+
+    .subtitle h2 {
+        color: rgba(255,255,255,0.98);
+        position: relative;
+        top: 0px;
+        padding: 0;
+        margin: 0;
     }
 
 .description {
@@ -92,9 +109,10 @@ img {
     display: inline-block;
     width: 50%;
     z-index: 3;
+    top:-70px;
     position: relative;
     padding: 40px;
-    left: 50%;
+    margin: 40px;
 }
 
     .description2 strong {
@@ -106,6 +124,8 @@ img {
     width: 20%;
     position: absolute;
     z-index: 4;
+    padding: 10px;
+    margin: 0;
 }
 
 .educationRec {
@@ -116,11 +136,108 @@ img {
     height: 850px;
     background-color: #272323;
     color: rgba(255,255,255,0.7);
+    overflow: hidden;
 }
 
     .educationRec img {
         left: 5%;
         width: 35%;
-        position: absolute;
+        position: relative;
         z-index: 4;
+        padding: 20px;
+        margin: 0;
+    }
+
+.separator {
+    display:flex;
+    margin:0;
+    padding:0;
+    position: relative;
+    top: 10px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(74,26,108,1) 0%, rgba(104,52,140,1) 50%, rgba(74,26,108,1) 100%);
+}
+
+
+
+.options {
+    top: 10px;
+    position: relative;
+    height: 80px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.list {
+    flex: 1;
+    position: relative;
+    height: 50%;
+    text-align: center;
+    padding: 8px 20px;
+    margin: 20px 20px;
+    border: none;
+    background-color: #68348c;
+    display: inline-block;
+}
+
+    .list::after {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255,255,255,0.9);
+        transition: height 0.3s ease; /* Smooth transition for the slide effect */
+        height: 0; /* Start with no height */
+    }
+
+    .list:hover::after {
+        height: 100%; /* On hover, the pseudo-element covers the button */
+    }
+
+    .list .text {
+        color: rgba(255,255,255,0.9);
+        font-size: 18px;
+        position: relative; /* Needed to apply z-index */
+        z-index: 2; /* Higher than the pseudo-element */
+        transition: color 0.5s ease; /* Transition for text color change */
+    }
+
+    .list:hover .text {
+        color: #68348c;
+    }
+
+#displayText {
+    position: relative; /* Required for absolute positioning of the pseudo-element */
+    left:110px;
+    top:5px;
+    display: inline-block; /* Or block, depending on your layout */
+    width: 50%;
+}
+
+#movedSeparator {
+    width: 80%;
+    position: relative;
+    left: 0px;
+}
+.hideRec {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 570px;
+    left: 10%;
+    width: 100%;
+    height: 20%;
+    background: #272323;
+    transition: transform 0.8s cubic-bezier(0.07, 0.47, 0.53,0.83);
+}
+
+    .hideRec separator {
+        width: 100%;
     }
