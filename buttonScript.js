@@ -1,11 +1,18 @@
 // Elements selection
 var displayText = document.getElementById('displayText');
-var hideRect = document.getElementById('hideRec'); // Corrected from 'hideRect' to 'hideRec'
+var hideRect = document.getElementById('hideRec');
+var eduRec = document.getElementById('eduRec');
+var firstIteration = true;
 
 // Function to move the hideRect up or down
 function moveHideRect(down = false) {
     return new Promise(resolve => {
-        hideRect.style.transform = down ? 'translateY(100%)' : 'translateY(0)'; // Adjust for correct direction
+        
+        hideRect.style.transform = down ? 'translateY(100%)' : 'translateY(0)';
+        var eduRecHeight = eduRec.offsetHeight; // Get the actual height
+        eduRec.style.height = down ? (eduRecHeight + 200) + 'px' : !firstIteration ? (eduRecHeight - 200) + 'px' : (eduRecHeight) + 'px';
+
+        // Assuming you're using transition for hideRect
         hideRect.addEventListener('transitionend', () => {
             resolve();
         }, { once: true });
@@ -21,9 +28,12 @@ async function updateText(buttonId) {
     // Determine the new text based on buttonId
     let text = '';
     switch (buttonId) {
-        case 'button1': text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol nia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol lacinia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non volutpat velit metus non purus. Sed ut ultricies ligula, a fermentum ligula. Suspendisse eu velit sit amet risus dapibus malesuada. Sed auctor libero sit amet metus dictum, ac mattis ex efficitur. Etiam eget turpis vel odio vehicula efficitur. Proin luctus eget elit sit amet interdum.'; break;
-        case 'button2': text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra libero eget justo nia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol lacinia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non volutpat velit metus non purus. Sed ut ultricies ligula, a fermentum ligula. Suspendisse eu velit sit amet risus dapibus malesuada. Sed auctor libero sit amet metus dictum, ac mattis ex efficitur. Etiam eget turpis vel odio vehicula efficitur. Proin luctus eget elit sit amet interdum.'; break;
+        case 'button1': text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol nia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol lacinia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non volutpat velit metus non purus. Sed ut ultricies ligula, a fermentum ligula. Suspendisse eu velit sit amet risus dapibus malesuada. Sed auctor libero sit amet metus dictum, ac mattis ex efficitur. Etiam eget turpis vel odio vehicula efficitur. Proin luctus eget elit sit amet interdum.';
+            break;
+        case 'button2': text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra libero eget justo nia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol lacinia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non volutpat velit metus non purus. Sed ut ultricies ligula, a fermentum ligula. Suspendisse eu velit sit amet risus dapibus malesuada. Sed auctor libero sit amet metus dictum, ac mattis ex efficitur. Etiam eget turpis vel odio vehicula efficitur. Proin luctus eget elit sit amet interdum.';
+            break;
         case 'button3': text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, odio a aliquet bibendum, nunc ex pharetra tellus, sed commodo enim elit vel lorem. Sed vel arcu eget augue auctor eleifend id ac velit. Integer hendrerit, libero in gravida aliquet, nulla urna bibendum est, nec vestibulum risus ante nec odio. Suspendisse potenti. Curabitur nec libero nec eros euismod pharetra. Etiam vel ipsum eu odio condimentum lacinia'; break;
+            break;
         default: text = 'Default Text';
     }
 
@@ -41,5 +51,6 @@ async function updateText(buttonId) {
 document.querySelectorAll('.list').forEach(button => {
     button.addEventListener('click', function () {
         updateText(this.id);
+        firstIteration = false;
     });
 });

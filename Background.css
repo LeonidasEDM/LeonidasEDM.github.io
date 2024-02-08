@@ -28,3 +28,9 @@ body {
     .background img {
         z-index: 1;
     }
+
+.tempRec{
+    background-color:red;
+    width:100%;
+    height:1800px;
+}
