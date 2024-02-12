@@ -9,14 +9,15 @@
     overflow: hidden;
 }
 
-    .educationRec img {
-        left: calc(-50vw + 6rem);
+    #Holmes {
+        position:relative;
+        left: -45%;
         width: calc(26.5vw + 9.5rem);
         position: relative;
         z-index: 4;
         padding: 20px;
         margin: 10px;
-        top: calc(17.5vw - 11.5rem);
+        top: 60px;
     }
 
 .education {
@@ -31,23 +32,45 @@
     top: calc(-9vw + 10rem);
 }
 
+.optionsRec {
+    position:relative;
+    left:10%;
+    height:15%;
+    width:80%;
+}
+
+.educationHold{
+    background-color:green;
+}
+
 @media only screen and (max-width: 1200px) {
 
-    .educationRec img {
+
+    .options .list {
+        height: 80%;
+    }
+
+    .educationRec .hideRec {
+        top: calc(1vw + 11rem);
+    }
+    .educationRec {
+        height: calc(76rem + -46vw);
+    }
+
+    #Holmes {
         left: calc(-58vw + 5rem);
-        top: calc(35vw + -22rem);
+        top: calc(26vw + -15rem)
     }
 
     .education {
         width: calc(60vw - 5rem);
         left: calc(41.5vw + 3.5rem);
-        top: calc(-10vw + 10rem);
-        color: red;
+        top: 0px;
+        font-size: 17px;
+        padding-top: 70px;
+        margin: 0;
     }
-        
-        .education h3 {
-            font-size: 15px;
-        }
+
 }
 
 @media only screen and (max-width: 850px) {
@@ -104,7 +127,7 @@
 }
 
 .options {
-    top: 60px;
+    top: 55px;
     position: relative;
     height: 80px;
     margin: 10px;
@@ -112,6 +135,7 @@
     justify-content: center;
     flex-wrap: wrap;
     flex: 1;
+    align-items: flex-start;
 }
 
 .list {
@@ -124,6 +148,7 @@
     border: none;
     background-color: #68348c;
     display: inline-block;
+
 }
 
     .list::after {
@@ -156,8 +181,8 @@
 
 #displayText {
     position: relative; /* Required for absolute positioning of the pseudo-element */
-    left: 100px;
-    top: 65px;
+    left: 0;
+    top: 85px;
     display: inline-block; /* Or block, depending on your layout */
     width: 50%;
 }
@@ -173,9 +198,9 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 710px;
+    top: 130%;
     width: 100%;
-    height: 20%;
+    height: 100%;
     background: #272323;
     transition: transform 0.8s cubic-bezier(0.07, 0.47, 0.53,0.83);
 }

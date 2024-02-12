@@ -8,9 +8,9 @@ var firstIteration = true;
 function moveHideRect(down = false) {
     return new Promise(resolve => {
         
-        hideRect.style.transform = down ? 'translateY(100%)' : 'translateY(0)';
+        hideRect.style.transform = down ? 'translateY(200px)' : 'translateY(0)';
         var eduRecHeight = eduRec.offsetHeight; // Get the actual height
-        eduRec.style.height = down ? (eduRecHeight + 200) + 'px' : !firstIteration ? (eduRecHeight - 200) + 'px' : (eduRecHeight) + 'px';
+        eduRec.style.height = down ? (eduRecHeight + 250) + 'px' : !firstIteration ? (eduRecHeight - 250) + 'px' : (eduRecHeight) + 'px';
 
         // Assuming you're using transition for hideRect
         hideRect.addEventListener('transitionend', () => {
