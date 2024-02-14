@@ -3,22 +3,21 @@
     position: relative;
     width: 100%;
     top: calc(16vw + 19rem);
-    height: calc(-5vw + 55rem);
+    height: 800px;
     background-color: #272323;
     color: rgba(255,255,255,0.7);
     overflow: hidden;
 }
 
-    #Holmes {
-        position:relative;
-        left: -45%;
-        width: calc(26.5vw + 9.5rem);
-        position: relative;
-        z-index: 4;
-        padding: 20px;
-        margin: 10px;
-        top: 60px;
-    }
+#Holmes {
+    position: relative;
+    width: calc(26.5vw + 9.5rem);
+    position: relative;
+    z-index: 4;
+    padding: 20px;
+    margin: 10px 5.5vw;
+    max-width: 620px;
+}
 
 .education {
     display: inline-block;
@@ -27,9 +26,8 @@
     position: relative;
     padding: calc(2vw + 1rem);
     margin: 0;
-    font-size: 22px;
-    left: calc(35vw + 10rem);
-    top: calc(-9vw + 10rem);
+    font-size: 20px;
+
 }
 
 .optionsRec {
@@ -39,8 +37,16 @@
     width:80%;
 }
 
-.educationHold{
-    background-color:green;
+.educationHold {
+
+    display: flex;
+    place-content:center;
+    align-items: center; /* Vertical centering */
+    justify-content: flex-start;
+    margin-top: auto;
+    padding:2px;
+    position:relative;
+    top:50px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -53,43 +59,95 @@
     .educationRec .hideRec {
         top: calc(1vw + 11rem);
     }
+
     .educationRec {
-        height: calc(76rem + -46vw);
+        height: calc(90rem + -55vw);
     }
 
     #Holmes {
-        left: calc(-58vw + 5rem);
-        top: calc(26vw + -15rem)
+        position: relative;
+        width: calc(26.5vw + 9.5rem);
+        position: relative;
+        z-index: 4;
+        padding: 20px;
+        margin: 10px 5.5vw;
     }
 
     .education {
-        width: calc(60vw - 5rem);
-        left: calc(41.5vw + 3.5rem);
-        top: 0px;
-        font-size: 17px;
-        padding-top: 70px;
+        display: inline-block;
+        width: calc(55vw - 6rem);
+        z-index: 3;
+        position: relative;
+        padding: calc(2vw + 1rem);
         margin: 0;
+        font-size: 18px;
     }
 
+    .optionsRec {
+        position: relative;
+        left: 10%;
+        height: 15%;
+        width: 80%;
+    }
+
+    .educationHold {
+        display: flex;
+        place-content: center;
+        align-items: center; /* Vertical centering */
+        justify-content: flex-start;
+        margin-top: auto;
+        padding: 2px;
+        position: relative;
+        top: 50px;
+    }
+
+    .options {
+        font-size: 10px;
+    }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
 
-    .educationRec img {
-        left: calc(17vw);
-        width: calc(55vw + 5rem);
-        top: calc(12vw);
+    .list {
+        min-width: 350px;
+    }
+
+    .educationRec .hideRec {
+        top: calc(5vw + 23rem);
+    }
+
+    .educationRec {
+        height: calc(88rem + -12vw);
+    }
+
+    #Holmes {
+        position: relative;
+        width: calc(47.5vw + 7.5rem);
+        position: relative;
+        z-index: 4;
+        padding: 20px;
+        margin: 10px 5.5vw;
     }
 
     .education {
-        color: blue;
+        display: inline-block;
         width: 80%;
-        left: 13%;
-        top: calc(-5vw + 6rem);
+        z-index: 3;
+        position: relative;
+        padding: calc(2vw + 1rem);
+        margin: 0;
+        font-size: 18px;
     }
 
-    .education h3 {
-        font-size: 15px;
+    .optionsRec {
+        position: relative;
+        left: 10%;
+        height: 15%;
+        width: 80%;
+    }
+
+    .educationHold {
+        flex-direction:column-reverse;
     }
 }
 
@@ -148,7 +206,6 @@
     border: none;
     background-color: #68348c;
     display: inline-block;
-
 }
 
     .list::after {

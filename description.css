@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     top: calc(14.5vw + 15.5rem);
-    height: calc(50rem - 2vw);
+    height: 800px;
     background-color: #0E0D0D;
     color: rgba(255,255,255,0.7);
 }
@@ -11,73 +11,104 @@
 
     .descriptionRec img {
         left: calc(65vw - 2rem);
-        width: calc(15vw + 10rem);
+        height:80%;
         position: absolute;
         z-index: 4;
         padding: 10px;
         margin: 0;
     }
 
-    .descriptionHold{
-        position:relative;
-        top:90px;
-    }
+.descriptionHold {
+    position: relative;
+    width: 100%;
+    height: 92%;
+    padding: 4vw;
+    display: flex;
+    align-items: center; /* Vertical centering */
+}
 
 .description {
     display: inline-block;
     width: calc(60vw - 5rem);
+    height: 90%;
     z-index: 3;
     position: relative;
     padding: calc(2vw + 1rem);
     margin: 0;
 }
 
-    .description h3 {
-        position: relative;
-        font-size: 16px;
-        text-anchor: start;
-    }
+.descriptionHold h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjusts the position to truly center the element */
+    font-size: 16px;
+    width:80%;
+}
 
 @media only screen and (max-width: 1200px) {
     .descriptionRec {
         height: calc(-25vw + 65rem)
     }
 
-        .descriptionRec img {
-            top: calc(-27vw + 20rem);
-        }
-
     .description {
         width: calc(60vw - 1rem);
     }
 
         .description h3 {
-            font-size: 17px;
+            font-size: 16px;
         }
+
+    .descriptionRec img {
+        height: auto;
+        width: calc(15vw + 10rem);
+    }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
     .descriptionRec {
         height: 1400px
     }
 
         .descriptionRec img {
-            position: relative;
-            top: 60px;
-            left: calc(38vw - 7rem);
-            width: calc(28vw + 10rem);
-            z-index: 4;
-            padding: 10px;
-            margin: 0;
+            position: absolute;
+            height: auto;
+            width: calc(30vw + 10rem);
+            left: calc(35vw + -5.5rem);
+            padding: 20px;
+            top: calc(-60vw + 74rem);
         }
 
-    .description {
+
+    .descriptionHold {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 4vw;
         display: flex;
-        width: 80%;
+        flex-direction: column;
+        align-items: center; /* Vertical centering */
+        justify-content: flex-start;
+        margin-top:auto;
     }
 
-        .description h3 {
-            left: calc(20vw - 3.7rem);
-            font-size: calc(0.5vw + 0.9rem);
-        }
+    .description {
+        display: inline-block;
+        width: 100%;
+        height: 50%;
+        z-index: 3;
+        position: relative;
+        padding: calc(2vw + 1rem);
+        padding-bottom: 60px;
+        top:calc(-16vw + 12rem)
+    }
+
+    .descriptionHold h3 {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Adjusts the position to truly center the element */
+        font-size: 16px;
+        width: 80%;
+    }
 }
