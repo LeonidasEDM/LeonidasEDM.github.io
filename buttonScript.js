@@ -1,71 +1,59 @@
 // Elements selection
-var recResizeBool = false;
-let recSize = 'calc(90rem + -21vw)';
-let recSizeReset = 'calc(5vw + 42rem)';
 var displayText = document.getElementById('displayText');
 var displayImg = document.getElementById('displayImg');
-var hideRect = document.getElementById('hideRec');
+var hideRec = document.getElementById('hideRec');
 var eduRec = document.getElementById('eduRec');
 let text = '';
 let img = '';
-var first = true;
-var recY = 0;
-var recResetY = 0;
-let hideY = '';
-let hideResetY = '';
+var down = false;
+
 
 // Function to move the hideRect up or down
-function moveHideRect(down = false, btn) {
-
+function moveHideRect(btn) {
+    
     return new Promise(resolve => {
-
+        displayImg.style.opacity = btn === 'button3' ? '0' : '1';
         switch (btn) {
-            case 'button1': text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol nia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol lacinia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non volutpat velit metus non purus. Sed ut ultricies ligula, a fermentum ligula. Suspendisse eu velit sit amet risus dapibus malesuada. Sed auctor libero sit amet metus dictum, ac mattis ex efficitur. Etiam eget turpis vel odio vehicula efficitur. Proin luctus eget elit sit amet interdum.';
+            case 'button1': text = 'During my second semester at FGCU, I was introduced to the fundamentals of C++ and engaged in a collaborative endeavor with peers, crafting a console-based password manager. Our creation possessed straightforward login and logout features, serving as an insightful introduction to software development. Following the completion of our group project, I seized the opportunity to transform it into a personal venture, using the tools of the Simple and Fast Multimedia Library(SFML).Through diligent effort and experimentation, I evolved the project into a fully functional GUI application using serialization techniques.';
                 img = "passwordMNG.png"; 
-                hideY = 'translateY(430px)';
-                recY = 450;
                 break;
-            case 'button2': text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra libero eget justo nia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non vol lacinia, eget consequat risus suscipit. Fusce ut consectetur libero. Curabitur vehicula, tortor a blandit malesuada, urna ligula hendrerit urna, non volutpat velit metus non purus. Sed ut ultricies ligula, a fermentum ligula. Suspendisse eu velit sit amet risus dapibus malesuada. Sed auctor libero sit amet metus dictum, ac mattis ex efficitur. Etiam eget turpis vel odio vehicula efficitur. Proin luctus eget elit sit amet interdum.';
+            case 'button2': text = 'With the emergence of AI and its rapid evolution, I was inspired to learn some of its concepts and understand its roots. This is when I decided to take Data Mining which quickly became a favorite course. So much so that I put dozens of hours into training a machine learning algorithm to  estimating qualities of wine! This algorithm would analyze 6000 different record with 10+ attributes each to determine an optimal quality rating for each. One might even call it a miniature AI that autonomously navigated the complexities of wine evaluation.';
                 img = "MachineLRN.png"; 
-                hideY = 'translateY(380px)';
-                recY = 400;
                 break;
             case 'button3': text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod, odio a aliquet bibendum, nunc ex pharetra tellus, sed commodo enim elit vel lorem. Sed vel arcu eget augue auctor eleifend id ac velit. Integer hendrerit, libero in gravida aliquet, nulla urna bibendum est, nec vestibulum risus ante nec odio. Suspendisse potenti. Curabitur nec libero nec eros euismod pharetra. Etiam vel ipsum eu odio condimentum lacinia';
-                img = "passwordMNG.png"; 
-                hideY = 'translateY(200px)'; 
-                recY = 200;
                 break;
             default: text = 'Default Text';
         }
-
-        hideRect.style.transform = down ? hideY : 'translateY(0)';
-        var eduRecHeight = eduRec.offsetHeight; // Get the actual height
-        
-        eduRec.style.height = down ? recSize : first ? '' : recSizeReset;
-        recResetY = recY;
-        first = false;
-        // Assuming you're using transition for hideRect
-        hideRect.addEventListener('transitionend', () => {
-            resolve();
-        }, { once: true });
+       
+      
+        // Wait for the eduRec transition to end before resolving
+        eduRec.addEventListener('transitionend', () => setTimeout(resolve, 100), { once: true }); // Adding a 100ms delay
     });
 }
 
 // Function to update the display text and manage animations
-// Function to update the display text and manage animations
 async function updateText(buttonId) {
+    down = false;
 
-    // Move hideRect up to temporarily hide the text while updating
-    await moveHideRect(false, buttonId); // Move up to hide
-    globalResize = true;
-    // Update the text immediately after hideRect has moved up
+    // Wait for layout adjustments to complete before hiding content
+    await adjustLayout();
+
+    // Now proceed with hiding and updating content
+    await moveHideRect(buttonId);
+
     displayText.textContent = text;
     displayImg.src = img;
-    // Introduce a short delay before sliding the rectangle back down to reveal the text
-    // This delay allows the user to perceive that the text has been updated
+
+    // Introduce a short delay before sliding the rectangle back down
     setTimeout(async () => {
-        await moveHideRect(true, buttonId); // Move down to reveal after a delay
-    }, 500); // Adjust the delay as needed (500ms as an example)
+        down = true;
+
+        // Adjust layout again if necessary, waiting for any transitions
+        await adjustLayout();
+
+        // Finally, move down to reveal the updated content
+        await moveHideRect(buttonId);
+    }, 500); // Adjust delay as needed
 }
 
 // Ensure event listeners are correctly attached to buttons
