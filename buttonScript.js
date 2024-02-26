@@ -1,4 +1,7 @@
 // Elements selection
+var recResizeBool = false;
+let recSize = 'calc(90rem + -21vw)';
+let recSizeReset = 'calc(5vw + 42rem)';
 var displayText = document.getElementById('displayText');
 var displayImg = document.getElementById('displayImg');
 var hideRect = document.getElementById('hideRec');
@@ -38,7 +41,7 @@ function moveHideRect(down = false, btn) {
         hideRect.style.transform = down ? hideY : 'translateY(0)';
         var eduRecHeight = eduRec.offsetHeight; // Get the actual height
         
-        eduRec.style.height = down ? 'calc(90rem + -21vw)' : first ? '' :'calc(5vw + 42rem)';
+        eduRec.style.height = down ? recSize : first ? '' : recSizeReset;
         recResetY = recY;
         first = false;
         // Assuming you're using transition for hideRect
@@ -54,7 +57,7 @@ async function updateText(buttonId) {
 
     // Move hideRect up to temporarily hide the text while updating
     await moveHideRect(false, buttonId); // Move up to hide
-
+    globalResize = true;
     // Update the text immediately after hideRect has moved up
     displayText.textContent = text;
     displayImg.src = img;
