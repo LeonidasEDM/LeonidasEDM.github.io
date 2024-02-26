@@ -27,26 +27,24 @@
     padding: calc(2vw + 1rem);
     margin: 0;
     font-size: 20px;
-
 }
 
 .optionsRec {
-    position:relative;
-    left:10%;
-    height:15%;
-    width:80%;
+    position: relative;
+    left: 10%;
+    height: 15%;
+    width: 80%;
 }
 
 .educationHold {
-
     display: flex;
-    place-content:center;
+    place-content: center;
     align-items: center; /* Vertical centering */
     justify-content: flex-start;
     margin-top: auto;
-    padding:2px;
-    position:relative;
-    top:50px;
+    padding: 2px;
+    position: relative;
+    top: 50px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -62,7 +60,6 @@
 
     .educationRec .hideRec {
         top: calc(1vw + 11rem);
-
     }
 
     .educationRec {
@@ -152,20 +149,49 @@
     }
 
     .educationHold {
-        flex-direction:column-reverse;
+        flex-direction: column-reverse;
     }
+
+    .displayCont {
+        top: 160px;
+        position: relative;
+        width: 100%;
+        height: 92%;
+        padding: 4vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Vertical centering */
+    }
+
+        .displayCont #displayText {
+            position: relative;
+            top: 55px;
+            left: 0px;
+            width: 100%;
+        }
+
+        .displayCont #displayImg {
+            left: 0;
+            top: 100px;
+            width: 100%;
+        }
+
+        .displayCont video {
+            margin: 0px;
+            top: 140px
+        }
 }
 
-    .education strong {
-        color: rgba(255,255,255,0.9);
-    }
+.education strong {
+    color: rgba(255,255,255,0.9);
+}
 
 .subtitle {
     position: relative;
     z-index: 2;
     padding: 0px;
     margin: 0px;
-    top:50px;
+    top: 50px;
     font-size: 20px;
 }
 
@@ -241,8 +267,9 @@
     }
 
 
+
 .displayCont {
-    top:160px;
+    top: 160px;
     position: relative;
     width: 100%;
     height: 92%;
@@ -272,9 +299,9 @@
 }
 
 #movedSeparator {
-    top:0;
+    top: 0;
     width: 83.8%;
-    left:8.1%;
+    left: 8.1%;
     position: relative;
 }
 
@@ -300,3 +327,14 @@
     transition: height 0.9s ease-out; /* Adjust timing and easing as needed */
 }
 
+video {
+    width: 100%; /* Responsive width */
+    max-width: 465px; /* Maximum width */
+    margin: 0px -30px 0px 70px;
+    height: auto; /* Maintain aspect ratio */
+    border: 3px solid #ddd; /* Border around the video */
+    box-shadow: 0 0 5px #000; /* Shadow effect */
+    border-radius: 8px; /* Rounded corners */
+    position: relative;
+    display: none;
+}
