@@ -27,3 +27,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           results_file: scorecards-results.json
           results_format: json
+      - name: Upload Scorecard Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: scorecard-results
+          path: scorecards-results.json
