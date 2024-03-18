@@ -42,7 +42,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Adjusts the position to truly center the element */
-    font-size: 16px;
+    font-size: 18.5px;
     width: 80%;
 }
 

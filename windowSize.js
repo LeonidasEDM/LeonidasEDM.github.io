@@ -15,15 +15,15 @@ async function adjustLayout() {
         if (width < 900) {
             eduRec.style.height = down ? 'calc(144rem - 50vw)' : 'calc(88rem + -12vw)';
             hideRec.style.top = down ? 'calc(-22vw + 76rem)' : 'calc(5vw + 23rem)';
-            document.body.style.backgroundColor = "lightblue";
+
         } else if (width >= 900 && width < 1200) {
             eduRec.style.height = down ? 'calc(111rem + -50vw)' : 'calc(84rem + -53vw)';
             hideRec.style.top = down ? '650px' : 'calc(1vw + 11rem)';
-            document.body.style.backgroundColor = "lightgreen";
+
         } else {
             eduRec.style.height = down ? '1180px' : '750px';
             hideRec.style.top = down ? '560px' : '160px';
-            document.body.style.backgroundColor = "lightcoral";
+
         }
         setTimeout(resolve, transitionDuration);
     });
