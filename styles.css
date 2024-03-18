@@ -16,3 +16,9 @@
     .tab{
         margin-left: 3rem;
     }
+
+@media only screen and (max-width:900px) {
+    .tab {
+        margin-left: 0rem;
+    }
+}

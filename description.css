@@ -90,6 +90,7 @@
         align-items: center; /* Vertical centering */
         justify-content: flex-start;
         margin-top: auto;
+        text-align: center;
     }
 
     .description {

@@ -120,6 +120,7 @@
 
     .educationRec {
         height: calc(88rem + -12vw);
+        text-align:center;
     }
 
     #Holmes {
