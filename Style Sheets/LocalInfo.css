@@ -33,28 +33,28 @@
 }
 
 .localInfoPictures button[name="btnHurricane"]{
-    background-image: url("/Pictures\ &\ Images/hurricaneLogo2.png");
+    background-image: url("/Pictures & Images/hurricaneLogo2.png");
     background-size:cover;
     background-position-y: -2px;
     opacity: 90%;
 }
 
 .localInfoPictures button[name="btnSurge"]{
-    background-image: url("/Pictures\ &\ Images/SurgeLogo.png");
+    background-image: url("/Pictures & Images/SurgeLogo.png");
     background-size:cover;
     background-position-y: -2px;
     opacity: 90%;
 }
 
 .localInfoPictures button[name="btnTraffic"]{
-    background-image: url("/Pictures\ &\ Images/trafficLogo.png");
+    background-image: url("/Pictures & Images/trafficLogo.png");
     background-size:cover;
     background-position-y: -2px;
     opacity: 90%;
 }
 
 .localInfoPictures button[name="btnHeat"]{
-    background-image: url("/Pictures\ &\ Images/heatLogo.png");
+    background-image: url("/Pictures & Images/heatLogo.png");
     background-size:cover;
     background-position-y: -2px;
     opacity: 90%;
