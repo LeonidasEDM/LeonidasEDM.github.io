@@ -1,0 +1,97 @@
+
+.conInfoDisplay {
+    display: grid;
+    grid-template-rows: 90px 10px 1fr;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.conInfoDisplay h2{
+    grid-column: 1 / span 2;
+    color: rgb(5, 29, 73);
+    text-align: center;
+    font-size: 32px;
+}
+
+.preparednessInfoOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    grid-row: 3/ span 4;
+    padding: 10px 30px;
+}
+
+.divider1{
+    grid-column: 1 / span 2;
+    width: 90%;
+    height: 4px;
+    border-radius: 20px;
+    background-color: rgb(123, 194, 253);
+    justify-self: center;
+}
+
+.divider2{
+    width: 85%;
+    height: 4px;
+    border-radius: 20px;
+    background-color: rgb(123, 194, 253);
+    justify-self: center;
+}
+
+.prepInformation {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 0.5fr 0.5fr;
+    align-items: center;
+    color: rgb(5, 29, 73);
+    justify-self: center;
+    font-size: 25px;
+    padding: 15px 50px;
+}
+
+.prepInformation video{
+    justify-self: center;
+    padding: 10px;
+}
+
+
+.btnInfo {
+    align-items: center;
+    appearance: none;
+    background-color: rgb(123, 194, 253);
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mon0", monospace;
+    height: 48px;
+    justify-content: center;
+    transition: box-shadow .15s, transform .15s;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 20px;
+}
+
+.preparednessInfoOptions button:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, rgb(5, 29, 73), rgb(5, 24, 59));
+    color: white;
+}
+
+.preparednessInfoOptions button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.preparednessInfoOptions button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+    background-image: radial-gradient(100% 100% at 100% 0, rgb(5, 29, 73), rgb(5, 24, 59));
+    color: white;
+}

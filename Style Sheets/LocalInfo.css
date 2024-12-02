@@ -1,0 +1,66 @@
+.conLocalDisplay{
+    display: grid;
+    grid-template-rows: 115px 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 77, 128);
+    padding: 0px 20px 80px 10px;
+}
+
+.conLocalDisplay h2 {
+    grid-column: 1 / span 2;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+}
+
+.localInfoPictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-self: center;
+    gap: 50px;
+}
+
+.localInfoPictures button {
+    width: 270px;
+    height: 270px;
+    padding: 0px 50px 160px 12px;
+    font-family: "Arial Black";
+    text-align: left;
+    font-size: 25px;
+    color: white
+}
+
+.localInfoPictures button[name="btnHurricane"]{
+    background-image: url("/Pictures\ &\ Images/hurricaneLogo2.png");
+    background-size:cover;
+    background-position-y: -2px;
+    opacity: 90%;
+}
+
+.localInfoPictures button[name="btnSurge"]{
+    background-image: url("/Pictures\ &\ Images/SurgeLogo.png");
+    background-size:cover;
+    background-position-y: -2px;
+    opacity: 90%;
+}
+
+.localInfoPictures button[name="btnTraffic"]{
+    background-image: url("/Pictures\ &\ Images/trafficLogo.png");
+    background-size:cover;
+    background-position-y: -2px;
+    opacity: 90%;
+}
+
+.localInfoPictures button[name="btnHeat"]{
+    background-image: url("/Pictures\ &\ Images/heatLogo.png");
+    background-size:cover;
+    background-position-y: -2px;
+    opacity: 90%;
+}
+
+.localInfoPictures button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px;
+    transform: translateY(-10px);
+}

@@ -1,0 +1,31 @@
+.footer{
+    background-color: rgb(18, 95, 82);
+    display: flex;
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100px;
+    justify-content: space-evenly;
+    color: white;
+    padding: 0px 150px;
+    align-items: center;
+}
+
+.footerItem{
+    align-content: center;
+    text-align: left;
+}
+
+.footerItem[name='title']{
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    text-align: left;
+    font-size: 22px;
+    left: 20px;
+    position: relative;
+}
+
+.footerDiv{
+    background-color: white;
+    width: 2px;
+    height: 50%;
+}

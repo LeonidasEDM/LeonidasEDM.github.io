@@ -1,0 +1,79 @@
+.conRecoveryAssistance h2 {
+    text-align: center;
+    grid-column: 1 / span 2;
+    padding: 16px;
+    font-size: 32px;
+}
+
+.RecovAssist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: auto;
+    background-color: rgb(216, 224, 252);
+    padding: 0px 120px 40px 120px;
+
+}
+
+.OptionRecovAssist {
+    width: 22vw;
+    justify-content: center;
+    margin: 20px;
+    border: 4px solid rgb(5, 29, 73);
+    border-radius: 20px;
+}
+
+.imgRecovAssist {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: contain;
+    border-top-right-radius:16px;
+    border-top-left-radius:16px;
+}
+
+.btnRecovAssist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(5, 29, 73);
+    color: white;
+    border: 4px solid rgb(5, 29, 73);
+    justify-content: center;
+    text-align: left;
+    border-bottom-right-radius:16px;
+    border-bottom-left-radius:16px;
+}
+
+.btnTitle {
+    font-size: 25px;
+    display: inline;
+    padding: 2px 2px;
+    font-family: "Arial Black";
+    color:rgb(123, 194, 253);
+}
+
+.btndescription{
+    font-size: 16px;
+    display: inline;
+    padding: 5px 2px;
+    font-family: "Arial";
+    color:rgb(123, 194, 253);
+}
+
+.OptionRecovAssist:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, rgb(5, 29, 73), rgb(5, 24, 59));
+}
+
+.OptionRecovAssist:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px;
+    transform: translateY(-2px);
+}
+
+.OptionRecovAssist:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+    background-image: radial-gradient(100% 100% at 100% 0, rgb(5, 29, 73), rgb(5, 24, 59));
+}
+

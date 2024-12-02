@@ -1,0 +1,45 @@
+.conmain{
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+}
+
+.title{
+    /* background-color: rgb(218, 224, 255); */
+    display: grid;
+    grid-template-rows: 110px;
+    padding:10px 10px 0px 10px;
+}
+
+.severityLevel{
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: 176px 1fr;
+    align-content: start;
+    justify-content: center;
+    text-align: center;
+}
+
+.severityLevel{
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.severityLevel h2[name=currentLevel]{
+    padding: 0px 5px;
+    background-color: rgb(16, 202, 16);
+}
+
+
+.conMain h1{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    padding: 10px 0px;
+}
+
+.conMain h2{
+    font-size: 25px;
+    text-align: left;
+    color: white;
+}
