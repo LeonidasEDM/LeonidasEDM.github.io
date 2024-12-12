@@ -1,3 +1,20 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('/Pictures\ &\ Images/IanPic.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position-y: -60px;
+    background-attachment: fixed;
+}
+
+.infoCont {
+    background-color: rgb(216, 224, 252);
+    margin: 50px 0px 0px 0px;
+}
+
 .conmain{
     display: grid;
     justify-content: center;
