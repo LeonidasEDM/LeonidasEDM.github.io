@@ -41,9 +41,6 @@
 }
 
 .prepInformation {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 0.5fr 0.5fr;
     align-items: center;
     color: rgb(5, 29, 73);
     justify-self: center;
