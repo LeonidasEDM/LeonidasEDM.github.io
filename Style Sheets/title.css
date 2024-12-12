@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('/Pictures\ &\ Images/IanPic.png');
+    background-image: url('/Pictures & Images/IanPic.png');
     background-repeat: no-repeat;
     background-size:contain;
     background-position-y: -60px;
